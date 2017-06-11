@@ -1,7 +1,7 @@
 
 <ul class="SideMenu" href="#">
   <li *ngFor="let item of sideMenuItems">
-    <a class="SideMenuItem" href="#">
+    <a class="SideMenuItem {{ item.active }}" href="#">
       <img src="{{ item.imgSrc }}" alt="" class="SideMenuItem-icon">
       <h3 class="SideMenuItem-text"> {{ item.title }}</h3>
     </a>

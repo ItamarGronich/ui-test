@@ -14,9 +14,14 @@
   text-transform: capitalize;
   padding: 35px 50px;
 
-
-  &:hover {
+  &:hover,
+  &.active {
     background: $blue-highlight;
+  }
+
+  &.active {
+    border-left: 10px solid $blue-light;
+    padding-left: 40px;
   }
 }
 
