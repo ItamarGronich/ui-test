@@ -1,0 +1,35 @@
+@import '../../../assets/sass/colors';
+
+.SideMenu {
+  list-style: none;
+  height: 100%;
+  width: 318px;
+}
+
+.SideMenuItem {
+  display: block;
+  color: white;
+  text-decoration: none;
+  height: 102px;
+  text-transform: capitalize;
+  padding: 35px 50px;
+
+
+  &:hover {
+    background: $blue-highlight;
+  }
+}
+
+.SideMenuItem-icon {
+  display: inline;
+  margin: 2px 9px 0 0 ;
+}
+
+.SideMenuItem-text {
+  display: inline;
+  margin-right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: super;
+  letter-spacing: -1px;
+}

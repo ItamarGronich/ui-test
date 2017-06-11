@@ -1,0 +1,10 @@
+@mixin beforeCenter {
+  // To allow vertical align.
+   &:before {
+     content: '';
+     width: 1px;
+     display: inline-block;
+     height: 100%;
+     vertical-align: middle;
+   }
+}
