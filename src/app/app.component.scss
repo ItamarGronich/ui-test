@@ -21,5 +21,10 @@
 }
 
 .Main {
-  color: $grey-primary;
+  background: $grey-primary;
+  height: 100%;
+}
+
+.MainSection {
+  width: 100%;
 }
