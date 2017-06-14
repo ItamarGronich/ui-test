@@ -5,4 +5,42 @@
   width: 100%;
   border-bottom: 1px solid $grey-darker;
   background: white;
+  padding: 20px 15px;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+}
+
+article {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pullRight {
+  float: right;
+}
+
+.pullLeft {
+  float: left;
+}
+
+.addProjectBtn {
+  background: $blue-light;
+  font-size: 20px;
+
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 0.7em 1em;
+
+  &:before {
+    content: '+';
+    color: $grey-darker;
+    margin-right: 10px;
+  }
 }
