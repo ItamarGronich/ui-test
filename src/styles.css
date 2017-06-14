@@ -66,5 +66,5 @@ body,html {
 body {
 
   /* For development. */
-  /*background-image: url('assets/images/general.png');*/
+  /*background-image: url('assets/images/general.png') no-repeat;*/
 }
