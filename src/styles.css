@@ -66,5 +66,9 @@ body,html {
 body {
 
   /* For development. */
-  /*background-image: url('assets/images/general.png') no-repeat;*/
+  /*background-image: url('assets/images/general.png');*/
+}
+
+h1 {
+  font-size: 48px;
 }

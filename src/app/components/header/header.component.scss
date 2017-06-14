@@ -38,14 +38,25 @@ article {
   color: white;
   padding: 0.7em 1em;
 
+  cursor: pointer;
+
   &:before {
     content: '+';
     color: $grey-darker;
     margin-right: 10px;
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: darken($blue-light, 10%);;
+  }
 }
 
 .UserMenu {
+  cursor: pointer;
   $userImgDiameter: 64px;
   position: relative;
   height: $userImgDiameter;
@@ -55,4 +66,12 @@ article {
   img {
     height: 100%;
   }
+}
+
+.Messages {
+  cursor: pointer;
+}
+
+.Notifications {
+  cursor: pointer;
 }

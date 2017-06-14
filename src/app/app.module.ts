@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SideMenu } from './components/sideMenu/sideMenu.component'
-import { Header } from './components/header/header.component'
+import { Header } from './components/header/header.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     SideMenu,
-    Header
+    Header,
+    DashboardComponent
   ],
   imports: [
     BrowserModule
