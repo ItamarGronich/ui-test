@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  cardLists = {
+    tasks: []
+  , messages: []
+  , activity: []
+  };
+  graphs = [
+      '/assets/images/graph1.png'
+    , '/assets/images/graph1.png'
+  ]
+
   constructor() { }
 
   ngOnInit() {
