@@ -10,7 +10,8 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   @Input() list: Array<Object>;
-  @Input() graph: String;
+  @Input() type: String;
+  @Input() badges: String[];
 
   ngOnInit() {
   }

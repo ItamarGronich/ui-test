@@ -9,7 +9,10 @@ import { CardComponent } from './components/card/card.component';
 import { GraphComponent } from './components/card/graph/graph.component';
 import { ListComponent } from './components/card/list/list.component';
 import { FilterComponent } from './components/card/filter/filter.component';
-import { BadgeComponent } from './components/card/badge/badge.component'
+import { BadgeComponent } from './components/card/badge/badge.component';
+import { ListItemTasksComponent } from './components/card/list/list-item-tasks/list-item-tasks.component';
+import { ListItemMessagesComponent } from './components/card/list/list-item-messages/list-item-messages.component';
+import { ListItemActivityComponent } from './components/card/list/list-item-activity/list-item-activity.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { BadgeComponent } from './components/card/badge/badge.component'
     GraphComponent,
     ListComponent,
     FilterComponent,
-    BadgeComponent
+    BadgeComponent,
+    ListItemTasksComponent,
+    ListItemMessagesComponent,
+    ListItemActivityComponent
   ],
   imports: [
     BrowserModule
