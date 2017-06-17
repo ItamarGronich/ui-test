@@ -12,8 +12,9 @@ import { TimeTo } from '../../../../services/time-to.service';
     <img src="" alt="" />
   </div>
   `,
-  styles: ['p  {background: blue;}']
+  styles: ['']
 })
+
 export class ListItemMessagesComponent implements OnInit {
 
   constructor(private timeTo: TimeTo) { }
@@ -23,13 +24,15 @@ export class ListItemMessagesComponent implements OnInit {
   @Input() message: String;
   @Input() icon: String;
 
-  private textTime = 'Just now'
+  private textTime = 'Just now';
+
   @Input()
   set time(time: Date) {
 
     this.textTime = this.timeTo.human(time);
 
   };
+
   ngOnInit() {
   }
 
