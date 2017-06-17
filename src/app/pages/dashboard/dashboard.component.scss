@@ -18,10 +18,19 @@
   @extend %row;
   height: 525px;
   padding-top: 20px;
+
+  &-item {
+    flex-grow: 1;
+    width: 30%;
+    margin-right: 41px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
-
-.CardGraph, .CardList {
+.CardGraph{
   background: green;
   flex-grow: 1;
   border: 1px solid white;
