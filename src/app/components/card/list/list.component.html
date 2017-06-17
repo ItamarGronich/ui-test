@@ -1,28 +1,29 @@
 <ul class="List">
-  <li class="List-item" *ngFor="let listItem of list" [ngSwitch]="type">
+  <li class="List-item" *ngFor="let listItem of list; let i=index" [ngSwitch]="type">
     <!--  Maybe one of the components below -->
+    <template [ngIf]="i < 4">
+      <!--  tasks list item -->
+      <app-list-item-tasks
+      *ngSwitchCase="'tasks'"
+      [title]="listItem.title"
+      [time]="listItem.time"></app-list-item-tasks>
 
-    <!--  tasks list item -->
-    <app-list-item-tasks
-    *ngSwitchCase="'tasks'"
-    [title]="listItem.title"
-    [time]="listItem.time"></app-list-item-tasks>
+      <!--  messages list item -->
+      <app-list-item-messages
+      *ngSwitchCase="'messages'"
+      [uName]="listItem.uName"
+      [time]="listItem.time"
+      [message]="listItem.message"
+      [icon]="listItem.icon"
+      ></app-list-item-messages>
 
-    <!--  messages list item -->
-    <app-list-item-messages
-    *ngSwitchCase="'messages'"
-    [uName]="listItem.uName"
-    [time]="listItem.time"
-    [message]="listItem.message"
-    [icon]="listItem.icon"
-    ></app-list-item-messages>
-
-    <!--  tasks list activity -->
-    <app-list-item-activity
-    *ngSwitchCase="'activity'"
-    [uName]="listItem.uName"
-    [time]="listItem.time"
-    [message]="listItem.message"
-    [icon]="listItem.icon"></app-list-item-activity>
+      <!--  tasks list activity -->
+      <app-list-item-activity
+      *ngSwitchCase="'activity'"
+      [uName]="listItem.uName"
+      [time]="listItem.time"
+      [message]="listItem.message"
+      [icon]="listItem.icon"></app-list-item-activity>
+    </template>
   </li>
 </ul>

@@ -3,7 +3,8 @@
     <h4 class="{{ type === 'graph' ? 'GraphTitle' : ''}}">{{title}}</h4>
 
     <app-filter class="pullRight" *ngIf="type === 'graph'"></app-filter>
-    <app-badge class="pullRight" *ngFor="let number of badges" [amount]="number"></app-badge>
+    <app-badge *ngIf="goodBadge" class="pullRight" [amount]="goodBadge" ></app-badge>
+    <app-badge *ngIf="badBadge" class="pullRight" [amount]="badBadge" [red]="true" ></app-badge>
   </header>
 
   <app-list *ngIf="type === 'list'" [list]="list" [type]="itemType"></app-list>

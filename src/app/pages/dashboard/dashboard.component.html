@@ -19,7 +19,10 @@
         [list]="taskList"
         [type]="'list'"
         [itemType]="'tasks'"
-        [title]="'Tasks'">
+        [title]="'Tasks'"
+        [goodBadge]="futureTasks"
+        [badBadge]="pastTasks"
+        >
       </app-card>
     </div>
 
@@ -29,6 +32,7 @@
         [type]="'list'"
         [itemType]="'messages'"
         [title]="'Messages'"
+        [goodBadge]="messageBadge"
       ></app-card>
     </div>
 
@@ -37,6 +41,7 @@
         [list]="activityList"
         [type]="'list'"
         [itemType]="'activity'"
+        [goodBadge]="activityList.length"
         [title]="'Activity'"
       ></app-card>
     </div>

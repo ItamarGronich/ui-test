@@ -3,4 +3,5 @@ export class Message {
   time: Date;
   message: string;
   icon: string;
+  unread: boolean;
 }

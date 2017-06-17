@@ -16,20 +16,27 @@ export class DashboardComponent implements OnInit {
     private activityService: ActivityService,
   ) { }
 
-  taskList     = [];
-  activityList = [];
-  messageList  = [];
+  taskList       = [];
+  pastTasks      = 2;
+  futureTasks    = 5;
+  activityList   = [];
+  messageList    = [];
+  messageBadge  = 0;
 
   getTasks() {
     this.taskService.getTasks().then( tasks => this.taskList = tasks );
   }
 
   getMessages() {
-    this.activityService.getActivities().then( activities => this.activityList = activities );
+    this.messageService.getMessages().then( messages => {
+      let badge = messages.filter( el => el.unread ).length
+      this.messageBadge = badge;
+      this.messageList = messages;
+    });
   }
 
   getActivities() {
-    this.messageService.getMessages().then( messages => this.messageList = messages );
+    this.activityService.getActivities().then( activities => this.activityList = activities );
   }
 
   // Urls for graph images.
