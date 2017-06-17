@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityService } from '../../model/activity/activity.service';
+import { MessageService } from '../../model/message/message.service';
+import { TaskService } from '../../model/task/task.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,50 +9,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  // DI.
+  constructor(
+    private taskService: TaskService,
+    private messageService: MessageService,
+    private activityService: ActivityService,
+  ) { }
 
-  // Data for the lists in the list cards.
-  cardLists = [
-    {
-      type: 'tasks'
-    , badges: [5, 2]
-    , data: [
-          { title: 'New Website for Symu.co', time: new Date() }
-        , { title: 'Free business PSD Template', time: new Date() }
-        , { title: 'New logo for JCD.pl', time: new Date() }
-        , { title: 'Free icons Set vol.3', time: new Date() }
-      ]
-    }
-    , {
-      type: 'messages'
-    , badges: [2]
-    , data: [
-          { uName: 'Nina Jones', message: 'Hey you! it\'s me again i\'ve attached new information regarding ', time: new Date('June 16, 2017 16:40:00'), icon: '/assets/images/icons/user1.png' }
-        , { uName: 'Nina Jones', message: 'Hey I\'ve attached some new PSD files for you to go over.', time: new Date('June 14, 2017 16:40:00'), icon: '/assets/images/icons/user1.png' }
-        , { uName: 'James Smith', message: 'Good morning! You are fired!', time: new Date(), icon: '/assets/images/icons/user2.png' }
-        , { uName: 'Nina Jones', message: 'Hello could you bring me cofee please?', time: new Date(), icon: '/assets/images/icons/user1.png' }
-      ]
-    }
-    , {
-      type: 'activity'
-    , badges: [10]
-    , data: [
-          { uName: 'Nina Jones', message: 'Hey you! it\'s me again i\'ve attached new information regarding ', time: new Date(), icon: '/assets/images/icons/user1.png' }
-        , { uName: 'Nina Jones', message: 'Hey I\'ve attached some new PSD files for you to go over.', time: new Date(), icon: '/assets/images/icons/user2.png' }
-        , { uName: 'James Smith', message: 'Good morning! You are fired!', time: new Date('June 5, 2017 16:40:00'), icon: '/assets/images/icons/user3.png' }
-        , { uName: 'Nina Jones', message: 'Hello could you bring me cofee please?', time: new Date('June 1, 2017 13:13:00'), icon: '/assets/images/icons/user4.png' }
-      ]
-    }
-  ];
+  taskList     = [];
+  activityList = [];
+  messageList  = [];
+
+  getTasks() {
+    this.taskService.getTasks().then( tasks => this.taskList = tasks );
+  }
+
+  getMessages() {
+    this.activityService.getActivities().then( activities => this.activityList = activities );
+  }
+
+  getActivities() {
+    this.messageService.getMessages().then( messages => this.messageList = messages );
+  }
 
   // Urls for graph images.
   graphs = [
     '/assets/images/graph1.png'
   , '/assets/images/graph2.png'
-  ]
+  ];
 
-  constructor() { }
 
   ngOnInit() {
+
+    this.getTasks();
+    this.getActivities();
+    this.getMessages();
   }
 
 }

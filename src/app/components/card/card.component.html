@@ -1,9 +1,9 @@
 <article class="Card">
   <header>
-    <h4>{{type}}</h4>
+    <h4>{{title}}</h4>
 
     <app-badge class="pullRight" *ngFor="let number of badges" [amount]="number"></app-badge>
   </header>
 
-  <app-list *ngIf="list.length > 0" [list]="list" [type]="type"></app-list>
+  <app-list *ngIf="type === 'list'" [list]="list" [type]="itemType"></app-list>
 </article>

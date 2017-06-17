@@ -8,10 +8,26 @@
   </div>
 
   <div class="bottomRow">
-    <app-card *ngFor="let cardList of cardLists"
-    [list]="cardList.data"
-    [type]="cardList.type"
-    [badges]="cardList.badges"
+
+    <app-card
+    [list]="taskList"
+    [type]="'list'"
+    [itemType]="'tasks'"
+    [title]="'Tasks'"
+    ></app-card>
+
+    <app-card
+    [list]="messageList"
+    [type]="'list'"
+    [itemType]="'messages'"
+    [title]="'Tasks'"
+    ></app-card>
+
+    <app-card
+    [list]="activityList"
+    [type]="'list'"
+    [itemType]="'activity'"
+    [title]="'Activity'"
     ></app-card>
   </div>
 

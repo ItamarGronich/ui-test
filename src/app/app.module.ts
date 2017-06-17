@@ -14,6 +14,10 @@ import { ListItemTasksComponent } from './components/card/list/list-item-tasks/l
 import { ListItemMessagesComponent } from './components/card/list/list-item-messages/list-item-messages.component';
 import { ListItemActivityComponent } from './components/card/list/list-item-activity/list-item-activity.component';
 import { TimeTo } from './services/time-to.service';
+import { Backend } from './services/backend.service';
+import { ActivityService } from './model/activity/activity.service';
+import { MessageService } from './model/message/message.service';
+import { TaskService } from './model/task/task.service';
 
 
 @NgModule({
@@ -34,7 +38,13 @@ import { TimeTo } from './services/time-to.service';
   imports: [
     BrowserModule
   ],
-  providers: [TimeTo],
+  providers: [
+    Backend,
+    TaskService,
+    MessageService,
+    ActivityService,
+    TimeTo
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

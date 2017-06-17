@@ -11,6 +11,8 @@ export class CardComponent implements OnInit {
 
   @Input() list: Array<Object>;
   @Input() type: String;
+  @Input() itemType: String;
+  @Input() title: String;
   @Input() badges: String[];
 
   ngOnInit() {
