@@ -3,8 +3,13 @@
 <section class="Grid">
 
   <div class="topRow">
-    <div class="CardGraph flexSmall"></div>
-    <div class="CardGraph flexMedium"></div>
+    <app-card
+      class="topRow-item"
+      *ngFor="let graphUrl of graphs"
+      [type]="'graph'"
+      [graph]="graphUrl"
+      [title]="'Your sales'"
+    ></app-card>
   </div>
 
   <div class="bottomRow">

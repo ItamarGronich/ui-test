@@ -1,0 +1,19 @@
+@import '../../../../assets/sass/colors';
+
+.Button {
+  border-radius: 16px;
+  border: 1px solid $grey-darkest;
+  padding: 15px 20px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Filter {
+  color: $grey-darkest;
+  font-weight: normal;
+}
+
+.Arrow {
+  margin-left: 30px;
+}

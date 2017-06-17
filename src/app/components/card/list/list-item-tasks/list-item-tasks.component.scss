@@ -55,3 +55,18 @@ p {
   display: inline-block;
   vertical-align: middle;
 }
+
+.wrapper {
+  position: relative;
+}
+
+.Options {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  &:hover {
+
+  }
+}

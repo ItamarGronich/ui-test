@@ -1,9 +1,11 @@
 <article class="Card">
-  <header>
-    <h4>{{title}}</h4>
+  <header class="{{ type === 'graph' ? 'GraphHeader' : ''}}">
+    <h4 class="{{ type === 'graph' ? 'GraphTitle' : ''}}">{{title}}</h4>
 
+    <app-filter class="pullRight" *ngIf="type === 'graph'"></app-filter>
     <app-badge class="pullRight" *ngFor="let number of badges" [amount]="number"></app-badge>
   </header>
 
   <app-list *ngIf="type === 'list'" [list]="list" [type]="itemType"></app-list>
+  <app-graph *ngIf="type === 'graph'" [graph]="graph"></app-graph>
 </article>

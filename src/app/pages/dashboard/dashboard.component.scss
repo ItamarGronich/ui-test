@@ -12,6 +12,20 @@
 .topRow{
   @extend %row;
   height: 525px;
+
+  &-item {
+    width: 30%;
+    margin-right: 41px;
+
+    &:first-child {
+      flex-grow: 3;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      flex-grow: 7;
+    }
+  }
 }
 
 .bottomRow {

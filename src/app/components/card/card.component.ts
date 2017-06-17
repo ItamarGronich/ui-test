@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   @Input() itemType: String;
   @Input() title: String;
   @Input() badges: String[];
+  @Input() graph: String;
 
   ngOnInit() {
   }
