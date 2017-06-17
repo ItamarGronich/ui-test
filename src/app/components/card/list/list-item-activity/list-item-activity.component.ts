@@ -4,14 +4,15 @@ import { TimeTo } from '../../../../services/time-to.service';
 @Component({
   selector: 'app-list-item-activity',
   template: `
-  <div>
-    <img src="{{icon}}" alt="">
-    <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ message }}</span></h5>
-    <p>{{ textTime }}</p>
-    <img src="" alt="" />
+  <div class="wrapper">
+    <img src="{{icon}}" alt="" class="Icon">
+    <div class="Activity">
+      <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ message }}</span></h5>
+      <p>{{ textTime }}</p>
+    </div>
   </div>
   `,
-  styles: []
+  styleUrls: ['./list-item-activity.component.scss']
 })
 
 export class ListItemActivityComponent implements OnInit {

@@ -5,14 +5,17 @@ import { TimeTo } from '../../../../services/time-to.service';
 @Component({
   selector: 'app-list-item-messages',
   template: `
-  <div>
-    <img src="{{icon}}" alt="">
-    <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ textTime }}</span></h5>
-    <p>{{ message }}</p>
-    <img src="" alt="" />
+  <div class="wrapper">
+    <img src="{{icon}}" alt="" class="Icon">
+    <div class="Message">
+      <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ textTime }}</span></h5>
+      <p>{{ message }}</p>
+      <img src="/assets/images/icons/share.png" alt="Share" />
+      <img src="/assets/images/icons/settings.png" alt="Settings" />
+    </div>
   </div>
   `,
-  styles: ['']
+  styleUrls: ['./list-item-messages.component.scss']
 })
 
 export class ListItemMessagesComponent implements OnInit {

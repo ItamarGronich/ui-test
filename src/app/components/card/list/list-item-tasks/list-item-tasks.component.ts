@@ -4,9 +4,12 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-list-item-tasks',
   template: `
   <div>
-    <a href="">{{ title[0].toUpperCase() }}</a>
-    <h5>{{ title }}</h5>
-    <p>{{ time ? time : 'Due today' }}</p>
+    <a class="Icon" href="">{{ title[0].toUpperCase() }}</a>
+    <a class="Task">
+      <h5>{{ title }}</h5>
+      <p>{{ time ? time : 'Due today' }}</p>
+    </a>
+    <a><img src="/assets/images/icons/options.png"></a>
   </div>
 `,
   styleUrls: ['./list-item-tasks.component.scss']

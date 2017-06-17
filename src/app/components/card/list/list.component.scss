@@ -1,0 +1,10 @@
+@import '../../../../assets/sass/colors';
+
+li {
+  height: 86px;
+  cursor: pointer;
+
+  &:hover {
+    background: $grey-primary;
+  }
+}
