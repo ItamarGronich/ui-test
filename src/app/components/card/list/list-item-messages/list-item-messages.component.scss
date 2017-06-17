@@ -1,0 +1,55 @@
+@import '../../../../../assets/sass/colors';
+
+.wrapper {
+  border-top: 1px solid $grey-darker;
+  height: 100%;
+  padding: 0 25px;
+
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    width: 0;
+    vertical-align: middle;
+  }
+}
+
+.Icon {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  margin-right: 20px;
+  vertical-align: middle;
+
+  &:hover {
+    background: $blue-highlight;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+  span {
+    font-weight: normal;
+    margin-left: 15px;
+    font-size: 14px;
+    color: $grey-darkest;
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 14px;
+  width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Message {
+  display: inline-block;
+  vertical-align: middle;
+}

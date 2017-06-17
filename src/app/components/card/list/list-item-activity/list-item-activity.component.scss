@@ -1,0 +1,68 @@
+@import '../../../../../assets/sass/colors';
+
+.wrapper {
+  height: 100%;
+  padding: 0 25px;
+
+  &:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    width: 0;
+    vertical-align: middle;
+  }
+}
+
+.Icon {
+  display: inline-block;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  background: $blue-light;
+  text-align: center;
+  line-height: 46px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  margin-right: 20px;
+  vertical-align: middle;
+
+  &:hover {
+    background: $blue-highlight;
+  }
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  vertical-align: bottom;
+
+  span {
+    display: inline-block;
+    font-weight: normal;
+    margin-left: 15px;
+    font-size: 14px;
+    color: $grey-darkest;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+
+  }
+}
+
+p {
+  font-size: 14px;
+  color: $grey-darkest;
+
+  &:before {
+    content: url('/assets/images/icons/time.png');
+  }
+}
+
+.Activity {
+  display: inline-block;
+  vertical-align: middle;
+}
