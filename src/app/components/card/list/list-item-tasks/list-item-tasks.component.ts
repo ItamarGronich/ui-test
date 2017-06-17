@@ -2,8 +2,14 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-item-tasks',
-  templateUrl: './list-item-tasks.component.html',
-  styles: [`p { background: blue;}`]
+  template: `
+  <div>
+    <a href="">{{ title[0].toUpperCase() }}</a>
+    <h5>{{ title }}</h5>
+    <p>{{ time ? time : 'Due today' }}</p>
+  </div>
+`,
+  styleUrls: ['./list-item-tasks.component.scss']
 })
 export class ListItemTasksComponent implements OnInit {
 

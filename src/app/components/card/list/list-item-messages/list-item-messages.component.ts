@@ -1,20 +1,35 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core';
+import { TimeTo } from '../../../../services/time-to.service';
 
 
 @Component({
   selector: 'app-list-item-messages',
-  template: `<p>Ha!</p>`,
+  template: `
+  <div>
+    <img src="{{icon}}" alt="">
+    <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ textTime }}</span></h5>
+    <p>{{ message }}</p>
+    <img src="" alt="" />
+  </div>
+  `,
   styles: ['p  {background: blue;}']
 })
 export class ListItemMessagesComponent implements OnInit {
 
-    @Input() uName: String;
-    @Input() message: String;
-    @Input() icon: String;
-    @Input() time: Date;
+  constructor(private timeTo: TimeTo) { }
 
-  constructor() { }
 
+  @Input() uName: String;
+  @Input() message: String;
+  @Input() icon: String;
+
+  private textTime = 'Just now'
+  @Input()
+  set time(time: Date) {
+
+    this.textTime = this.timeTo.human(time);
+
+  };
   ngOnInit() {
   }
 

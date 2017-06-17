@@ -12,7 +12,9 @@ import { FilterComponent } from './components/card/filter/filter.component';
 import { BadgeComponent } from './components/card/badge/badge.component';
 import { ListItemTasksComponent } from './components/card/list/list-item-tasks/list-item-tasks.component';
 import { ListItemMessagesComponent } from './components/card/list/list-item-messages/list-item-messages.component';
-import { ListItemActivityComponent } from './components/card/list/list-item-activity/list-item-activity.component'
+import { ListItemActivityComponent } from './components/card/list/list-item-activity/list-item-activity.component';
+import { TimeTo } from './services/time-to.service';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { ListItemActivityComponent } from './components/card/list/list-item-acti
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TimeTo],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
