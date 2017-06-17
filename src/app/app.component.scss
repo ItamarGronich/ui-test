@@ -13,6 +13,11 @@
   background: $blue-primary;
 }
 
+.Nav:not(.open) {
+  width: 0;
+  overflow: hidden;
+}
+
 .Logo {
   width: 318px;
   height: 120px;
@@ -23,7 +28,7 @@
 .Main {
   background: $grey-primary;
   height: 100%;
-  padding: 54px 36px 54px 41px;
+  padding: 54px 38px 54px 41px;
   overflow-y: auto;
   overflow-x: hidden;
 }

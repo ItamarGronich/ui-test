@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 // Main app component class.
 export class AppComponent {
   title = 'app';
+
+  menuOpen: boolean = true;
+
+  toggleMenu(event) {
+    this.menuOpen = event;
+  }
+
 }

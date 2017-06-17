@@ -5,10 +5,10 @@
   <div class="topRow">
     <app-card
       class="topRow-item"
-      *ngFor="let graphUrl of graphs"
+      *ngFor="let graph of graphs"
       [type]="'graph'"
-      [graph]="graphUrl"
-      [title]="'Your sales'"
+      [graph]="graph.url"
+      [title]="graph.title"
     ></app-card>
   </div>
 

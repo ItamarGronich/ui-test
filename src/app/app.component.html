@@ -1,6 +1,6 @@
 <!--The whole content below can be removed with the new code.-->
 <section class="wrapper">
-  <nav role="navigation" class="Nav">
+  <nav role="navigation" class="Nav {{ menuOpen ? 'open' : '' }}">
     <article class="Logo">
       <img src="assets/images/logo.png" alt="">
     </article>
@@ -8,7 +8,7 @@
   </nav>
 
   <section class="MainSection">
-    <top-header>  </top-header>
+    <top-header (change)="toggleMenu($event)">  </top-header>
 
     <main class="Main">
       <app-dashboard></app-dashboard>

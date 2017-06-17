@@ -23,7 +23,7 @@
 
     &:last-child {
       margin-right: 0;
-      flex-grow: 7;
+      flex-grow: 10;
     }
   }
 }
@@ -42,13 +42,6 @@
       margin-right: 0;
     }
   }
-}
-
-.CardGraph{
-  background: green;
-  flex-grow: 1;
-  border: 1px solid white;
-  height: 100%;
 }
 
 .flexSmall {

@@ -34,8 +34,8 @@ export class DashboardComponent implements OnInit {
 
   // Urls for graph images.
   graphs = [
-    '/assets/images/graph1.png'
-  , '/assets/images/graph2.png'
+    {title: 'Your sales', url:'/assets/images/graph1.png'}
+  , {title: 'Report', url:'/assets/images/graph2.png' }
   ];
 
 

@@ -5,7 +5,7 @@
   width: 100%;
   border-bottom: 1px solid $grey-darker;
   background: white;
-  padding: 20px 15px;
+  padding: 20px 15px 20px 23px;
 
   section:before {
     content: '';
@@ -24,6 +24,7 @@ article {
 .pullRight {
   float: right;
   height: 100%;
+  margin-right: 20px;
 }
 
 .pullLeft {
@@ -38,7 +39,8 @@ article {
   border: none;
   border-radius: 30px;
   color: white;
-  padding: 0.7em 1em;
+  padding: 0.7em 27px;
+  margin-right: 29px;
 
   cursor: pointer;
 
@@ -59,21 +61,53 @@ article {
 
 .UserMenu {
   cursor: pointer;
-  $userImgDiameter: 64px;
+  $userImgDiameter: 53px;
   position: relative;
   height: $userImgDiameter;
-  width: $userImgDiameter;
-  overflow: hidden;
-  border-radius: 50%;
   img {
-    height: 100%;
+
+    height: $userImgDiameter;
+    width: $userImgDiameter;
+    overflow: hidden;
+    border-radius: 50%;
   }
+
+  .UserArrow {
+    width: 37px;
+    height: 37px;
+    transform: rotate(-90deg) translate(21%,-19%);
+  }
+
 }
 
 .Messages {
   cursor: pointer;
+  margin-right: -6px;
 }
 
 .Notifications {
   cursor: pointer;
+  margin-right: 20px;
+}
+
+.MenuIcon {
+  cursor: pointer;
+}
+
+.HamburgerIcon {
+  margin-left: -15px;
+}
+
+.Arrow {
+  transition: all 150ms;
+
+ &:not(.open) {
+   transform: rotate(180deg);
+ }
+
+}
+
+
+.Search {
+  margin-left: 25px;
 }

@@ -1,8 +1,9 @@
 <header role="menubar" class="Header">
 
   <section class="pullLeft">
-    <article class="MenuIcon">
-      <img src="/assets/images/arrow.png" alt=""><img src="/assets/images/menu.png" alt="">
+    <article class="MenuIcon" (click)="toggle($event)">
+      <img class="Arrow {{ open ? 'open' : '' }}" src="/assets/images/arrow.png" alt="">
+      <img class="HamburgerIcon" src="/assets/images/menu.png" alt="">
     </article>
 
     <article class="Search">
@@ -23,6 +24,7 @@
 
   <article class="UserMenu">
     <img src="/assets/images/profile.jpg" alt="">
+    <img src="/assets/images/arrow.png" alt="" class="UserArrow">
   </article>
 </section>
 
