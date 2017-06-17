@@ -1,7 +1,7 @@
 @import '../../../../../assets/sass/colors';
 
 .wrapper {
-  border-top: 1px solid $grey-darker;
+  border-bottom: 1px solid $grey-darker;
   height: 100%;
   padding: 0 25px;
 
@@ -19,6 +19,7 @@
   height: 46px;
   width: 46px;
   border-radius: 50%;
+  text-decoration: none;
   margin-right: 20px;
   vertical-align: middle;
 
@@ -52,4 +53,8 @@ p {
 .Message {
   display: inline-block;
   vertical-align: middle;
+}
+
+.Share, .Settings {
+  margin: 10px 10px 0 0;
 }

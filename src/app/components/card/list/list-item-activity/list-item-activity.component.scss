@@ -56,9 +56,13 @@ h5 {
 p {
   font-size: 14px;
   color: $grey-darkest;
+  vertical-align: middle;
 
+  // Time icon.
   &:before {
     content: url('/assets/images/icons/time.png');
+    margin-right: 10px;
+    vertical-align: middle;
   }
 }
 

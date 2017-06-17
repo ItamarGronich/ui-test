@@ -1,7 +1,7 @@
 @import '../../../../../assets/sass/colors';
 
 div {
-  border-top: 1px solid $grey-darker;
+  border-bottom: 1px solid $grey-darker;
   height: 100%;
   padding: 0 25px;
 
@@ -42,9 +42,12 @@ h5 {
 p {
   font-size: 14px;
   color: $grey-darkest;
+  vertical-align: middle;
 
   &:before {
     content: url('/assets/images/icons/time.png');
+    margin-right: 10px;
+    vertical-align: middle;
   }
 }
 

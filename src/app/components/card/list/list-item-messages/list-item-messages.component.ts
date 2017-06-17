@@ -10,8 +10,8 @@ import { TimeTo } from '../../../../services/time-to.service';
     <div class="Message">
       <h5>{{ uName ? uName : 'Anonymous' }}<span>{{ textTime }}</span></h5>
       <p>{{ message }}</p>
-      <img src="/assets/images/icons/share.png" alt="Share" />
-      <img src="/assets/images/icons/settings.png" alt="Settings" />
+      <img src="/assets/images/icons/share.png" alt="Share" class="Share"/>
+      <img src="/assets/images/icons/settings.png" alt="Settings" class="Settings"/>
     </div>
   </div>
   `,
