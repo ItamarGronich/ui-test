@@ -16,6 +16,7 @@ export class Header {
   toggle() {
     this.open = !this.open;
     this.change.emit(this.open);
+    console.log('toggle');
   }
 
 }

@@ -11,11 +11,22 @@
 
 .Nav {
   background: $blue-primary;
+
+  @media screen and (max-width: 920px) {
+    width: 0;
+    display: none;
+  }
 }
 
 .Nav:not(.open) {
   width: 0;
   overflow: hidden;
+  display: none;
+
+  @media screen and (max-width: 920px) {
+    width: unset;
+    display: block;
+  }
 }
 
 .Logo {
